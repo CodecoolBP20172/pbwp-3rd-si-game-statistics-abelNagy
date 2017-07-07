@@ -6,8 +6,9 @@ import sys
 def main():
     file_abs_path = '/home/abel/codecool/pbwp-3rd-si-game-statistics-abelNagy/part2/game_stat.txt'
     print('''\n\nHelo Judy(or whoever this is)!
-    I can answer your next questions as well.
-    Please choose one that you need the answer for.''')
+I can answer your next questions as well.
+Please choose one that you need the answer for.
+''')
 
     while True:
         answer = input('''
@@ -39,5 +40,6 @@ def main():
             print('{0} has the following properties:\n{1}'.format(input_title_prop, reports.get_game(file_abs_path, input_title_prop)))
         if answer == '7':
             print('You can find the number of games by genre in the following dictionary: \n{0}'.format(reports.count_grouped_by_genre(file_abs_path)))
+
 
 main()
