@@ -62,3 +62,22 @@ def get_game(file_name, title):
                 line[2] = int(line[2])
                 line[-1] = line[-1].replace('\n', '')
                 return line
+
+
+def count_grouped_by_genre(file_name):
+    with open(file_name) as file:
+        games_by_genre = {}
+        genre_key = []
+        data_as_list = []
+        for line in file:
+            line = line.split('\t')
+            data_as_list.append(line)
+            if line[3] not in genre_key:
+                genre_key.append(line[3])
+        for genre in genre_key:
+            count = 0
+            for line in data_as_list:
+                if line[3] == genre:
+                    count += 1
+            games_by_genre.update({genre: count})
+        return games_by_genre
