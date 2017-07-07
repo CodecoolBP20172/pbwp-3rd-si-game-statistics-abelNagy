@@ -17,6 +17,7 @@ def main():
             4. How many characters long is the longest title?
             5. What is the average of the release dates?
             6. What properties does a game have?
+            7. How many games are there grouped by genre?
             q. Exit program (when you are finished or just want to leave...)
     ''')
         if answer == 'q':
@@ -36,6 +37,7 @@ def main():
         if answer == '6':
             input_title_prop = input('Which title would you like me to look up the properties for? ')
             print('{0} has the following properties:\n{1}'.format(input_title_prop, reports.get_game(file_abs_path, input_title_prop)))
-
+        if answer == '7':
+            print('You can find the number of games by genre in the following dictionary: \n{0}'.format(reports.count_grouped_by_genre(file_abs_path)))
 
 main()
