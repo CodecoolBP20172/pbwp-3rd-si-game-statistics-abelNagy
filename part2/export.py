@@ -51,6 +51,8 @@ def main():
             input_title_prop = input('Which title would you like me to look up the properties for? ')
             file.write(str(reports.get_game(file_abs_path, input_title_prop)) + '\n')
             feedback()
-
+        if answer == '7':
+            file.write(str(reports.count_grouped_by_genre(file_abs_path)))
+            feedback()
 
 main()
