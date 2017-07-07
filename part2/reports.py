@@ -80,4 +80,4 @@ def count_grouped_by_genre(file_name):
                 if line[3] == genre:
                     count += 1
             games_by_genre.update({genre: count})
-        return games_by_genre
+    return games_by_genre
